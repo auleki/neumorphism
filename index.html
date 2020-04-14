@@ -8,34 +8,43 @@
     <script src="https://kit.fontawesome.com/b61dc92ef2.js" crossorigin="anonymous"></script>
 </head>
 <body class="light">
-    <button class="mode">Dark</button>
-    <ul>
-        <li>
-            <button >
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </li>
-        <li>
-            <button>
-                <i class="far fa-moon"></i>
-            </button>
-        </li>
-        <li>
-            <button>
-                <i class="fas fa-wifi"></i>
-            </button>
-        </li>
-        <li>
-            <button>
-                <i class="fab fa-bluetooth-b"></i>
-            </button>
-        </li>
-        <li>
-            <button>
-                <i class="fas fa-phone-alt"></i>
-            </button>
-        </li>
-    </ul>
+    <div class="container">
+        <div class="switch-box">
+            <label class="switch">
+                <input id="switch" type="checkbox"checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <button class="mode" id="mode">Dark</button>
+        <ul>
+            <li>
+                <button >
+                    <i class="far fa-angry"></i>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <i class="fas fa-fingerprint"></i>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <i class="fas fa-wifi"></i>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <i class="fab fa-bluetooth-b"></i>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <i class="fab fa-get-pocket"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+    
     <script src="fire.js"></script>
 </body>
 </html>

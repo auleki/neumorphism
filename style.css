@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -10,21 +12,79 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
     transition: 450ms; 
 }
 
-body button.mode{
+.container {
     position: absolute;
-    top: 20%;
-    padding: 5px 10px;
+    text-align: center;
+    position: relative;
+}
+
+.switch-box {
+    
+    height: 100%;
+
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 60px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(212, 0, 0);
+    transition: 400ms;
+    border-radius: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 50px;
+    width: 50px;
+    left: 5px;
+    bottom: 5px;
+    background-color: rgb(255, 255, 255);
+    transition: 400ms;
+    border-radius: 50px;
+}
+
+input:checked + .slider {
+    background-color: #252525;
+}
+
+input:checked + .slider:before {
+    transform: translateX(50px);
+}
+
+body button.mode{
+    position: relative;
+    top: -90%;
+    padding: 10px 15px;
     text-transform: uppercase;
+    font-family: "Source Code Pro";
     font-size: 18px;
     font-weight: bold;
     transition: 500ms;
-    border-radius: 5px;
+    border-radius: 2px;
     border: none;
     outline: none;
     cursor: pointer;
+    text-align: center;
 }
 
 ul {
@@ -34,6 +94,7 @@ ul {
     justify-content: center;
     padding: 20px;
     border-radius: 10px;
+    
 }
 
  li {
@@ -58,8 +119,8 @@ ul {
  }
 
  body.light button.mode {
-     background: #222;
-     color: #fff;
+     background: rgb(221, 221, 221);
+     color: rgb(90, 90, 90);
      text-shadow: #3e3e3e;
  }
 
@@ -70,7 +131,7 @@ ul {
 
  body.light li button {
      background: inherit;
-     color: #6a9bd8;
+     color: #d4220b;
      box-shadow: -2px -2px 5px #fff,
                 3px 3px 5px rgba(0,0,0, .07);
  }
@@ -89,8 +150,8 @@ body.light li button.active {
 }
 
 body.dark button.mode {
-    background: #f2f3f7;
-    color: #6a9bd8
+    background: #1a1a1a;
+    color: #fff;
     /* text-shadow: #3e3e3e; */
 }
 
@@ -101,15 +162,36 @@ body.dark ul {
 
 body.dark li button {
     background: inherit;
-    color: #219cf3;
+    color: #fc1d00;
     box-shadow:  inset -2px -2px 5px rgba(0,0,0,.5),
      inset 3px 3px 5px rgba(255,255,255,.07);
 }
 
 body.dark li button.active {
-    color: #219cf3;
+    color: #fc1d00;
     box-shadow:  -2px -2px 5px rgba(0,0,0,.5),
                   3px 3px 5px rgba(255,255,255,.07);
     text-shadow: 0 0 10px,
-                 0 0 20px #219cf3;
+                 0 0 20px #fc1d00;
+}
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+    #mode {
+        position: fixed;
+        top: 5rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        justify-content: center;
+    }
+   
+   
+    ul {
+        flex-wrap: wrap;
+        width: 50%;
+    }
 }

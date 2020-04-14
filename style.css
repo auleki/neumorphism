@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 450ms; 
+}
+
+body button.mode{
+    position: absolute;
+    top: 20%;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 500ms;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+ li {
+     list-style-type: none;
+     margin: 15px;
+ }
+
+ li button {
+     width: 60px;
+     height: 60px;
+     font-size: 20px;
+     border-radius: 4px;
+     cursor: pointer;
+     border: none;
+     outline: none;
+     transition: 400ms;
+ }
+
+ /* LIGHT MODE */
+ body.light {
+     background: #f2f3f7;
+ }
+
+ body.light button.mode {
+     background: #222;
+     color: #fff;
+     text-shadow: #3e3e3e;
+ }
+
+ body.light ul {
+     box-shadow: -2px -2px 5px #fff,
+                3px 3px 5px rgba(0,0,0,.07);
+ }
+
+ body.light li button {
+     background: inherit;
+     color: #6a9bd8;
+     box-shadow: -2px -2px 5px #fff,
+                3px 3px 5px rgba(0,0,0, .07);
+ }
+
+ 
+body.light li button.active {
+    box-shadow:inset -2px -2px 5px #fff,
+			   inset	3px 3px 5px rgba(0,0,0,.07);
+}
+
+
+ /* DARK MODE  */
+
+ body.dark {
+    background: #222;
+}
+
+body.dark button.mode {
+    background: #f2f3f7;
+    color: #6a9bd8
+    /* text-shadow: #3e3e3e; */
+}
+
+body.dark ul {
+    box-shadow: inset -2px -2px 5px rgba(0,0,0,.5),
+              inset 3px 3px 5px rgba(255,255,255,.07);
+}
+
+body.dark li button {
+    background: inherit;
+    color: #219cf3;
+    box-shadow:  inset -2px -2px 5px rgba(0,0,0,.5),
+     inset 3px 3px 5px rgba(255,255,255,.07);
+}
+
+body.dark li button.active {
+    color: #219cf3;
+    box-shadow:  -2px -2px 5px rgba(0,0,0,.5),
+                  3px 3px 5px rgba(255,255,255,.07);
+    text-shadow: 0 0 10px,
+                 0 0 20px #219cf3;
+}
